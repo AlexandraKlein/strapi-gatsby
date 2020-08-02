@@ -8,6 +8,7 @@ const Contact = () => {
     submitting: false,
     status: null,
   })
+
   const handleServerResponse = (ok, msg, form) => {
     setServerState({
       submitting: false,
@@ -17,13 +18,14 @@ const Contact = () => {
       form.reset()
     }
   }
+
   const handleOnSubmit = e => {
     e.preventDefault()
     const form = e.target
     setServerState({ submitting: true })
     axios({
       method: "post",
-      url: "https://formspree.io/xjvalgzq",
+      url: "https://formspree.io/myynojnj",
       data: new FormData(form),
     })
       .then(r => {

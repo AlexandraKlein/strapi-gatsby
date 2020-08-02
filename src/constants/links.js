@@ -31,11 +31,12 @@ const data = [
 const tempLinks = data.map(link => {
   return (
     <li key={link.id}>
-      <Link to={link.url}>{link.text}</Link>
+      <Link to={link.url} activeClassName="active">
+        {link.text}
+      </Link>
     </li>
   )
 })
-// I KNOW WE CAN COMBINE IT !!!!!
 
 export default ({ styleClass }) => {
   return (

@@ -182,7 +182,6 @@ p {
 .bg-grey {
   background: $clr-grey-10;
 }
-/* page links */
 
 /* social links */
 .social-links {
@@ -283,7 +282,8 @@ Navbar
       transition: $transition;
       padding: 0.5rem 0;
 
-      &:hover {
+      &:hover,
+      &.active {
         color: $clr-primary-5;
         box-shadow: 0px 2px $clr-primary-5;
       }
@@ -338,6 +338,10 @@ Sidebar
   font-size: 2rem;
   transition: $transition;
   border-radius: $radius;
+
+  &.active {
+    color: $clr-primary-5;
+  }
 }
 .sidebar-links li a:hover {
   background: $clr-primary-9;
