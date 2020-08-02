@@ -46,8 +46,8 @@ export const query = graphql`
         }
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(traceSVG: { color: "#abddd8" }) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }

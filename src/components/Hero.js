@@ -7,10 +7,10 @@ import SocialLinks from "../constants/socialLinks"
 
 const query = graphql`
   {
-    file(relativePath: { eq: "hero-img.png" }) {
+    file(relativePath: { eq: "gfm_hero.png" }) {
       childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
+        fluid(traceSVG: { color: "#abddd8" }) {
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }
@@ -30,10 +30,13 @@ const Hero = () => {
         <article className="hero-info">
           <div>
             <div className="underline"></div>
-            <h1>I'm John</h1>
-            <h4>Freelance Web and Mobile UI/UX Designer</h4>
+            <h1>
+              Grannies For <br />
+              Masks
+            </h1>
+            <h4>Join the Movement</h4>
             <Link to="/contact" className="btn">
-              contact me
+              Contact Us
             </Link>
           </div>
           <SocialLinks />

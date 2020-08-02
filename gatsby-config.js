@@ -6,14 +6,15 @@
 
 module.exports = {
   siteMetadata: {
-    title: "WebDev Portfolio",
-    description: "This is WebDev Portfolio Site",
-    author: "@webdev",
-    twitterUsername: "@john_smilga",
+    title: "Grannies For Masks",
+    description: "Grannies For Masks",
+    author: "@aliklein",
+    twitterUsername: "@aliklein",
     image: "/twitter-img.png",
-    siteUrl: "https://gatsby-strapi-1234.netlify.app",
+    siteUrl: "https://granniesformasks.netlify.app/",
   },
   plugins: [
+    `gatsby-plugin-sass`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
@@ -41,6 +42,10 @@ module.exports = {
         fonts: [
           {
             family: `Roboto`,
+            variants: [`400`, `700`],
+          },
+          {
+            family: `Staatliches`,
             variants: [`400`, `700`],
           },
           {
