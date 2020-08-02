@@ -37,7 +37,7 @@ $ff-primary: "Staatliches", sans-serif;
 $ff-secondary: "Open Sans", sans-serif;
 $transition: all 0.3s linear;
 $spacing: 0.2rem;
-$radius: 1.2rem;
+$radius: 0.5rem;
 $light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 $dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 $max-width: 1170px;
@@ -1016,6 +1016,17 @@ Contact Page
   color: $clr-grey-1;
   text-transform: uppercase;
   letter-spacing: $spacing;
+}
+.form-message {
+  margin-top: 2rem;
+
+  p.success {
+    color: $clr-green-dark;
+  }
+
+  p.error {
+    color: $clr-red-dark;
+  }
 }
 .submit-btn {
   display: block;
