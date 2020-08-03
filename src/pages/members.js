@@ -1,34 +1,18 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
-import Image from "gatsby-image"
-import Title from "../components/Title"
+import Members from "../components/Members"
 import SEO from "../components/SEO"
 
 const MembersPage = ({ data }) => {
   const {
-    allStrapiMembers: { nodes },
+    allStrapiMembers: { nodes: members },
   } = data
 
   return (
     <Layout>
       <SEO title="Members" description="Our Members" />
-      <section className="members-page">
-        <section className="section section-center ">
-          <Title title="Our Members" />
-          <div className="member-content">
-            {nodes.map(member => (
-              <div key={member.id} className="member-container">
-                <div className="member-img">
-                  <Image fluid={member.image.childImageSharp.fluid} />
-                </div>
-                {member.name && <h5>{member.name}</h5>}
-                {member.location && <small>{member.location}</small>}
-              </div>
-            ))}
-          </div>
-        </section>
-      </section>
+      <Members title="Our Members" members={members} />
     </Layout>
   )
 }

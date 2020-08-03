@@ -2,15 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/Layout"
 import Hero from "../components/Hero"
-import Services from "../components/Services"
-import Jobs from "../components/Jobs"
-import Projects from "../components/Projects"
+import VideoHero from "../components/VideoHero"
+import Members from "../components/Members"
 import Blogs from "../components/Blogs"
 import SEO from "../components/SEO"
 
 export default ({ data }) => {
   const {
-    featuredProjects: { nodes: projects },
+    limitedMembers: { nodes: members },
     limitedBlogs: { nodes: blogs },
   } = data
 
@@ -18,9 +17,8 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" description="This is our home page" />
       <Hero />
-      <Services />
-      <Jobs />
-      <Projects projects={projects} title="Featured Projects" showLink />
+      <VideoHero />
+      <Members title="Our Newest Members" members={members} showLink />
       <Blogs blogs={blogs} title="Latest Articles" showLink />
     </Layout>
   )
@@ -28,24 +26,21 @@ export default ({ data }) => {
 
 export const query = graphql`
   {
-    featuredProjects: allStrapiProjects(filter: { featured: { eq: true } }) {
+    limitedMembers: allStrapiMembers(
+      limit: 10
+      sort: { fields: id, order: DESC }
+    ) {
       nodes {
-        github
-        id
-        description
-        title
-        url
         image {
           childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
+            fluid(traceSVG: { color: "#abddd8" }) {
+              ...GatsbyImageSharpFluid_tracedSVG
             }
           }
         }
-        stack {
-          id
-          title
-        }
+        location
+        name
+        id
       }
     }
     limitedBlogs: allStrapiBlogs(
@@ -53,7 +48,6 @@ export const query = graphql`
       limit: 3
     ) {
       nodes {
-        category
         date(formatString: "MMM Do, YYYY")
         description
         id

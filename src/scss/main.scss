@@ -505,6 +505,42 @@ Hero
 
 /*
 =============== 
+Video Hero
+===============
+*/
+
+.section-video {
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom left,
+        $clr-primary-1,
+        $clr-primary-5
+      );
+      top: 5%;
+      left: 3%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+/*
+=============== 
 Services
 ===============
 */
@@ -875,7 +911,6 @@ Pages
 .blog-page,
 .error-page,
 .about-page,
-.members-page,
 .contact-page {
   background: $clr-grey-10;
   min-height: calc(100vh - 5rem - 9rem);
@@ -947,6 +982,7 @@ Members Page
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 6rem;
 
     .member-container {
       display: flex;
@@ -1111,42 +1147,64 @@ Blog Template
 ===============
 */
 .blog-template {
-  padding: 5rem 0;
-}
+  padding: 10rem 0 5rem;
 
-.blog-template h1,
-.blog-template h2 {
-  text-align: center;
-}
-.blog-template ul {
-  margin-top: 2rem;
-  display: inline-block;
-}
-.blog-template ul li {
-  background: $clr-grey-9;
-  color: $clr-grey-5;
-  padding: 0.5rem 1rem;
-  margin: 1rem 0;
-  text-transform: uppercase;
-}
+  h1,
+  h2,
+  h3 {
+    text-align: center;
+  }
 
-.blog-template blockquote {
-  background: $clr-primary-9;
-  border-radius: $radius;
-  padding: 1rem;
-  line-height: 2;
-  color: $clr-primary-5;
-  margin: 2rem 0;
-}
-.blog-template pre {
-  background: #222;
-  color: yellow;
-  overflow-x: scroll;
-  padding: 1rem 1.5rem;
-  border-radius: $radius;
-}
-.blog-template img {
-  width: 15rem;
-  height: 15rem;
-  margin: 3rem 0;
+  .external-link {
+    margin-top: 2rem;
+  }
+
+  a.link {
+    text-decoration: underline;
+    color: $clr-primary-3;
+
+    &:hover {
+      color: $clr-primary-1;
+    }
+  }
+
+  .blog-template-img {
+    margin-bottom: 3rem;
+  }
+
+  ul {
+    margin-top: 2rem;
+    display: inline-block;
+  }
+
+  li {
+    background: $clr-grey-9;
+    color: $clr-grey-5;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+  }
+
+  blockquote {
+    background: $clr-primary-9;
+    border-radius: $radius;
+    padding: 1rem;
+    line-height: 2;
+    color: $clr-primary-5;
+    margin: 2rem 0;
+  }
+
+  pre {
+    background: #222;
+    color: $clr-primary-7;
+    overflow-x: scroll;
+    padding: 1rem 1.5rem;
+    border-radius: $radius;
+  }
+
+  p img {
+    width: 15rem;
+    height: 15rem;
+    margin: 3rem 0;
+  }
 }

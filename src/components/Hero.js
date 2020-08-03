@@ -1,6 +1,6 @@
 import React from "react"
 import Image from "gatsby-image"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
 // ...GatsbyImageSharpFluid
@@ -35,9 +35,9 @@ const Hero = () => {
               Masks
             </h1>
             <h4>Join the Movement</h4>
-            <Link to="/contact" className="btn">
+            {/* <Link to="/contact" className="btn">
               Contact Us
-            </Link>
+            </Link> */}
           </div>
           <SocialLinks />
         </article>

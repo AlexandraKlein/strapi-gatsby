@@ -23,12 +23,12 @@ export const query = graphql`
   {
     allBlogs: allStrapiBlogs(sort: { fields: date, order: DESC }) {
       nodes {
-        category
         date(formatString: "MMM Do, YYYY")
         description
         id
         slug
         title
+        external_link
         image {
           childImageSharp {
             fluid(traceSVG: { color: "#abddd8" }) {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import Image from "gatsby-image"
 import { Link } from "gatsby"
 
-const Blog = ({ id, title, image, date, category, slug, description }) => {
+const Blog = ({ id, title, image, date, slug, description }) => {
   return (
     <Link to={`/blogs/${slug}`} key={id} className="blog">
       <article>
@@ -12,7 +12,6 @@ const Blog = ({ id, title, image, date, category, slug, description }) => {
           <h4>{title}</h4>
           <p>{description}</p>
           <div className="blog-footer">
-            <p>{category}</p>
             <p>{date}</p>
           </div>
         </div>
@@ -25,7 +24,6 @@ Blog.propTypes = {
   id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   image: PropTypes.object.isRequired,
