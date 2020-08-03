@@ -28,7 +28,7 @@ export const query = graphql`
   {
     limitedMembers: allStrapiMembers(
       limit: 10
-      sort: { fields: id, order: DESC }
+      sort: { order: DESC, fields: created_at }
     ) {
       nodes {
         image {

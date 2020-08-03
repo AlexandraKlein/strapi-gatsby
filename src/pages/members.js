@@ -19,7 +19,7 @@ const MembersPage = ({ data }) => {
 
 export const query = graphql`
   {
-    allStrapiMembers {
+    allStrapiMembers(sort: { order: DESC, fields: created_at }) {
       nodes {
         id
         name
