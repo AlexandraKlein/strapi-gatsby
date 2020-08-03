@@ -10,8 +10,6 @@ const MembersPage = ({ data }) => {
     allStrapiMembers: { nodes },
   } = data
 
-  console.log({ nodes })
-
   return (
     <Layout>
       <SEO title="Members" description="Our Members" />
@@ -20,15 +18,13 @@ const MembersPage = ({ data }) => {
           <Title title="Our Members" />
           <div className="member-content">
             {nodes.map(member => (
-              <>
-                <div>
-                  <div className="member-img">
-                    <Image fluid={member.image.childImageSharp.fluid} />
-                  </div>
-                  {member.name && <h5>{member.name}</h5>}
-                  {member.location && <small>{member.location}</small>}
+              <div key={member.id}>
+                <div className="member-img">
+                  <Image fluid={member.image.childImageSharp.fluid} />
                 </div>
-              </>
+                {member.name && <h5>{member.name}</h5>}
+                {member.location && <small>{member.location}</small>}
+              </div>
             ))}
           </div>
         </section>

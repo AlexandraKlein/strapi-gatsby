@@ -81,7 +81,6 @@ const Contact = () => {
               {serverState.status && (
                 <div className="form-message">
                   <p className={!serverState.status.ok ? "error" : "success"}>
-                    {console.log({ serverState })}
                     {serverState.status.msg}
                   </p>
                 </div>

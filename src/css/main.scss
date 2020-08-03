@@ -924,8 +924,8 @@ Members Page
   }
 
   .gatsby-image-wrapper {
-    width: 10rem;
-    height: 10rem;
+    width: 5rem;
+    height: 5rem;
     border-radius: 100%;
     overflow: hidden;
   }
@@ -936,9 +936,22 @@ Members Page
     display: flex;
     flex-wrap: wrap;
 
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     h5 {
       margin: 0;
     }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .members-page .gatsby-image-wrapper {
+    width: 10rem;
+    height: 10rem;
   }
 }
 
