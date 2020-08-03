@@ -2,7 +2,7 @@ import React from "react"
 import Navbar from "./Navbar"
 import Sidebar from "./Sidebar"
 import Footer from "./Footer"
-import "../css/main.scss"
+import "../scss/main.scss"
 
 const Layout = ({ children }) => {
   const [isOpen, setIsOpen] = React.useState(false)

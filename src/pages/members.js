@@ -18,7 +18,7 @@ const MembersPage = ({ data }) => {
           <Title title="Our Members" />
           <div className="member-content">
             {nodes.map(member => (
-              <div key={member.id}>
+              <div key={member.id} className="member-container">
                 <div className="member-img">
                   <Image fluid={member.image.childImageSharp.fluid} />
                 </div>
