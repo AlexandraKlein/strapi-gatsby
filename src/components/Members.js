@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 
 const Members = ({ members, title, showLink }) => {
   return (
-    <section className="members-page">
+    <section className="members-page bg-grey">
       <section className="section section-center ">
         <Title title={title} />
         <div className="member-content">

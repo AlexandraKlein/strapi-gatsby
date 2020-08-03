@@ -20,7 +20,7 @@ const VideoHero = () => {
   const { video_url } = nodes[0]
 
   return (
-    <section className="section section-video bg-grey">
+    <section className="section section-video">
       <div className="section-center">
         <div>
           <Title title="In The News" />

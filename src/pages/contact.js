@@ -45,7 +45,7 @@ const Contact = () => {
   }
   return (
     <Layout>
-      <SEO title="Contact" description="Contact Me" />
+      <SEO title="Contact" description="Contact Us" />
       <section className="contact-page">
         <article className="contact-form">
           <h3>Get in touch</h3>

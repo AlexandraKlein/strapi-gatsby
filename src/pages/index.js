@@ -15,10 +15,10 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title="Home" description="This is our home page" />
+      <SEO title="Home" description="Welcome to Grannies For Masks" />
       <Hero />
-      <VideoHero />
       <Members title="Our Newest Members" members={members} showLink />
+      <VideoHero />
       <Blogs blogs={blogs} title="Latest Articles" showLink />
     </Layout>
   )

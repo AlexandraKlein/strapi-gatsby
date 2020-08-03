@@ -36,6 +36,13 @@ const SEO = ({ title, description }) => {
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />
       <meta name="twitter:image" content={`${siteUrl}${image}`} />
+      <meta property="og:title" content={`${title} | ${siteTitle}`} />
+      <meta
+        property="og:description"
+        content={description || siteDescription}
+      />
+      <meta property="og:image" content={`${siteUrl}${image}`} />
+      <meta property="og:url" content={siteUrl} />
     </Helmet>
   )
 }

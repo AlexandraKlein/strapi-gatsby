@@ -9,8 +9,8 @@ module.exports = {
     title: "Grannies For Masks",
     description: "Grannies For Masks",
     author: "@aliklein",
-    twitterUsername: "@aliklein",
-    image: "/twitter-img.png",
+    twitterUsername: "@granniesformasks",
+    image: "/og-image.jpg",
     siteUrl: "https://granniesformasks.netlify.app/",
   },
   plugins: [
