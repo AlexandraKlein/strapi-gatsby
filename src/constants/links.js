@@ -13,8 +13,8 @@ const data = [
   },
   {
     id: 3,
-    text: "projects",
-    url: "/projects/",
+    text: "members",
+    url: "/members/",
   },
   {
     id: 4,
