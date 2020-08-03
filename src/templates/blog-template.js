@@ -14,10 +14,10 @@ const BlogTemplate = ({ data }) => {
       <section className="blog-template">
         <div className="section-center">
           <article>
-            <Image
-              fluid={image.childImageSharp.fluid}
-              className="blog-template-img"
-            />
+            <div className="blog-template-img">
+              <Image fluid={image.childImageSharp.fluid} />
+            </div>
+
             <ReactMarkdown source={content} />
             {external_link && (
               <div className="external-link">
