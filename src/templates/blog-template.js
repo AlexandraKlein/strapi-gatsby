@@ -10,14 +10,14 @@ const BlogTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={description} />
+      <SEO title={title} description={description} bodyClass="single-blog" />
       <section className="blog-template">
-        <div className="section-center">
-          <article>
-            <div className="blog-template-img">
-              <Image fluid={image.childImageSharp.fluid} />
-            </div>
+        <article>
+          <div className="blog-template-img">
+            <Image fluid={image.childImageSharp.fluid} />
+          </div>
 
+          <div className="section-center">
             <ReactMarkdown source={content} />
             {external_link && (
               <div className="external-link">
@@ -31,11 +31,11 @@ const BlogTemplate = ({ data }) => {
                 </a>
               </div>
             )}
-          </article>
-          <Link to="/blog" className="btn center-btn">
-            Back to Blog
-          </Link>
-        </div>
+          </div>
+        </article>
+        <Link to="/blog" className="btn center-btn">
+          Back to Blog
+        </Link>
       </section>
     </Layout>
   )
